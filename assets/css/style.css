@@ -326,8 +326,8 @@ footer {
 
     .gallery,
     .gallery__img-wrapper {
-        width: 150px;
-        height: 150px;
+        width: 400px;
+        height: 100px;
         padding: 5px;
     }
 
