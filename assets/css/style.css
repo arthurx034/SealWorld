@@ -224,7 +224,9 @@ footer {
         /* Remove margem fixa */
         width: 80%;
         /* Aumenta para ocupar mais espaço */
-        height: 250px;
+        height: 500px;
+        object-fit: cover;
+        object-position: center 50%;
         /* Reduz altura */
         border-radius: 40px 10px;
         /* Ajusta borda */
@@ -246,9 +248,9 @@ footer {
 
     .gallery,
     .gallery__img-wrapper {
-        width: 200px;
+        width: 650px;
         /* Reduz tamanho da galeria */
-        height: 200px;
+        height: 150px;
         padding: 10px;
         gap: 10px;
     }
@@ -259,12 +261,25 @@ footer {
         /* Remove margem extra em mobile */
     }
 
-    .gallery__img-wrapper:nth-child(1),
-    .gallery__img-wrapper:nth-child(2),
-    .gallery__img-wrapper:nth-child(3),
-    .gallery__img-wrapper:nth-child(4) {
-        transform: rotate(0);
-        /* Remove rotações para simplificar */
+    .gallery__img-wrapper:nth-child(1)::before,
+    .gallery__img-wrapper:nth-child(3)::before {
+        top: 13px;
+        left: 77%;
+        width: 20px;
+        height: 20px;
+        background-size: 20px 20px;
+    }
+
+    .gallery__img-wrapper:nth-child(2)::before,
+    .gallery__img-wrapper:nth-child(4)::before {
+        content: '';
+        position: absolute;
+        top: 0.8px;
+        left: 12.5%;
+        width: 20px;
+        height: 20px;
+        background-size: 20px 20px;
+        z-index: 1;
     }
 }
 
